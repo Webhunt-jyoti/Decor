@@ -1,0 +1,47 @@
+@import 'https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap';
+body {
+  background: #f1f3f2;
+  font-family: "Source Code Pro", monospace;
+  min-height: 90vh;
+  /*Important for centering content*/   
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+h1 {
+  position: relative;
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+.hybrid {
+ 
+  position: absolute;
+  width: auto;
+  /* float: left; */
+}
+
+span {
+  color: #48f100;
+  
+}
+
+.hybrid span::after {
+  align-self: center;
+  content: "|";
+  transition: 0.05s;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
